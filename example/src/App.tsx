@@ -1,18 +1,14 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-switches';
+import { Switch } from 'react-native-switches';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  React.useEffect(() => {}, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Switch />
     </View>
   );
 }
